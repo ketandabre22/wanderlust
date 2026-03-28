@@ -49,10 +49,15 @@ app.post("/listings", async (req, res) => {
       const newListing = new Listing(req.body.listing);
       await newListing.save();
       res.redirect("/listings");
-      have a look at the console to see the new listing data
+      
 });
 
-
+//edit route
+app.get("/listings/:id/edit", async (req, res) => {
+  let { id } = req.params;
+  const listing = await Listing.findById(id);
+  res.render("listings/edit.ejs", { listing });
+});
 
 // app.get("/testlistings", async (req, res) => {
 //   let sampleListig = new Listing({
