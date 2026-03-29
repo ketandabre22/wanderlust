@@ -1,15 +1,17 @@
 <% layout("layouts/boilerplate") %>
 
       <body>
-            <h3>All Listings </h3>
-            <form method="GET" action="/listings/new">
-                  <button type="submit">Create New Listing</button>
-            </form>
+            <h3>All Listings</h3>
+
             <ul>
                   <% allListings.forEach(function(listing) { %>
-                        <li> <a href="/listings/<%= listing._id %>">
-                                    <%= listing.title %>
-                              </a> </li>
-                        <% }); %>
+                        <% for (let i=0; i < 3; i++) { %> <!-- duplicate 3 times -->
+                              <li>
+                                    <a href="/listings/<%= listing._id %>">
+                                          <%= listing.title %> (copy <%= i + 1 %>)
+                                    </a>
+                              </li>
+                              <% } %>
+                                    <% }); %>
             </ul>
       </body>
