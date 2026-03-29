@@ -9,30 +9,26 @@
 
 <body>
 
-      <h3>Create a New Listing</h3>
+      <h3>Edit the existing Listing</h3>
 
-      <form method="POST" action="/listings">
+      <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
 
-            <input name="listing[title]" placeholder="Enter the Title" value="<%= listing ? listing.title : '' %>">
+            <input name="listing[title]" value="<%= listing ? listing.title : '' %>" type="text">
             <br><br />
 
-            <textarea name="listing[description]"
-                  placeholder="Enter the Description"><%= listing ? listing.description : '' %></textarea>
+            <textarea name="listing[description]"><%= listing ? listing.description : '' %></textarea>
             <br><br />
 
-            <input name="listing[image]" placeholder="Enter Image URL/Link" type="text"
-                  value="<%= listing ? listing.image : '' %>">
+            <input name="listing[image]" type="text" value="<%= listing ? listing.image : '' %>">
             <br><br />
 
-            <input name="listing[price]" placeholder="Enter the Price" value="<%= listing ? listing.price : '' %>">
+            <input name="listing[price]" value="<%= listing ? listing.price : '' %>">
             <br><br />
 
-            <input name="listing[location]" placeholder="Enter the Location"
-                  value="<%= listing ? listing.location : '' %>">
+            <input name="listing[location]" value="<%= listing ? listing.location : '' %>">
             <br><br />
 
-            <input name="listing[country]" placeholder="Enter the Country"
-                  value="<%= listing ? listing.country : '' %>">
+            <input name="listing[country]" value="<%= listing ? listing.country : '' %>">
             <br><br />
 
             <button type="submit">Update Listing</button>
