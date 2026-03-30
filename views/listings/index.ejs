@@ -5,7 +5,7 @@
 
             <ul>
                   <% allListings.forEach(function(listing) { %>
-                        <% for (let i=0; i < 3; i++) { %> <!-- duplicate 3 times -->
+                        <% for (let i=0; i < 2; i++) { %> <!-- duplicate 3 times -->
                               <li>
                                     <a href="/listings/<%= listing._id %>">
                                           <%= listing.title %> (copy <%= i + 1 %>)

@@ -1,0 +1,30 @@
+{
+    "type": "float-area",
+    "_widgets": [
+        [
+            {
+                "widget": {
+                    "constructionOptions": {
+                        "factoryId": "code-editor-opener",
+                        "options": {
+                            "kind": "navigatable",
+                            "uri": "init/data.js",
+                            "floatAreaId": "f8140622-c585-40d7-b172-36764ec019ca"
+                        }
+                    }
+                },
+                "width": 600,
+                "height": 450,
+                "spacing": 0
+            }
+        ]
+    ],
+    "_widths": [
+        600
+    ],
+    "_modelData": {
+        "connections": [],
+        "annotations": [],
+        "highlights": []
+    }
+}
